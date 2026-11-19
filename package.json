@@ -1,0 +1,12 @@
+{
+  "name": "remont-studio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Сайт на Ремонт Студио – ремонти на жилища във Варна",
+  "scripts": {
+    "build": "node src/build.mjs",
+    "preview": "node src/build.mjs && python3 -m http.server 4173 -d dist"
+  },
+  "engines": { "node": ">=18" }
+}
