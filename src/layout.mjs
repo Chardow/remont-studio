@@ -123,7 +123,7 @@ function footer() {
       </div>
     </div>
     <div class="podval__dolu">
-      <p>© ${year} ${SITE.firma} · ЕИК ${SITE.eik} · Варна. Илюстрациите са създадени за сайта.</p>
+      <p>© ${year} ${SITE.firma} · ЕИК ${SITE.eik} · Варна. Илюстрациите са създадени за сайта. Конкурсна задача, код NS-WYC5.</p>
       <ul><li><a href="/politika-za-poveritelnost/">Политика за поверителност</a></li><li><a href="/deklaratsiya-za-lichni-danni/">Декларация за лични данни</a></li></ul>
     </div>
   </div>
