@@ -6,6 +6,7 @@ if (form) {
   const svg = document.querySelector('[data-kn-plan] svg.plan');
   const tbody = document.querySelector('[data-kn-redove]');
   const total = document.querySelector('[data-kn-obshto]');
+  const mini = document.querySelector('[data-kn-obshto-mini]');
   const naM2 = document.querySelector('[data-kn-nam2]');
   const ploshtOut = document.querySelector('[data-kn-plosht]');
   const copyBtn = document.querySelector('[data-kn-copy]');
@@ -38,6 +39,7 @@ if (form) {
       ? r.redove.map(x => `<tr><td>${x.ime}</td><td>${evro(x.min)}</td><td>${evro(x.max)}</td></tr>`).join('')
       : '<tr><td colspan="3">Изберете поне едно перо.</td></tr>';
     total.textContent = r.min ? `от ${evro(r.min)} до ${evro(r.max)}` : '—';
+    if (mini) mini.textContent = total.textContent;
     naM2.textContent = r.min ? `≈ ${r.naM2[0]}–${r.naM2[1]} € на м²` : '';
     ploshtOut.textContent = `${s.plosht} м²`;
     // Схемата

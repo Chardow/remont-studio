@@ -4,7 +4,7 @@ export const SITE = {
   ime: 'Ремонт Студио',
   firma: '„РЕМОНТ СТУДИО“ ЕООД',
   eik: '000000000',
-  url: (process.env.SITE_URL || (process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : 'https://remont-studio.vercel.app')).replace(/\/$/, ''),
+  url: (process.env.SITE_URL || (process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : 'https://remont-studio-ten.vercel.app')).replace(/\/$/, ''),
   tel: '088 000 0000',
   telHref: 'tel:+359880000000',
   viber: 'viber://chat?number=%2B359880000000',

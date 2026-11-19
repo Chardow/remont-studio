@@ -306,7 +306,14 @@ a.kontakt:hover{border-color:var(--navy)}
 
 /* Конструктор */
 .kn{display:grid;gap:clamp(20px,3vw,40px);align-items:start}
-@media (min-width:1000px){.kn{grid-template-columns:1.1fr 1fr}.kn__viz{position:sticky;top:100px}}
+@media (min-width:1000px){.kn{grid-template-columns:1.1fr 1fr}.kn__viz{position:sticky;top:100px}.kn__mini{display:none}}
+@media (max-width:999px){
+  .kn__viz{order:-1;position:sticky;top:76px;z-index:2;padding:8px 10px;box-shadow:var(--shadow);display:flex;gap:12px;align-items:center}
+  .kn__viz .plan{max-height:24vh;width:auto;flex:0 1 auto;min-width:0}
+  .kn__viz .belezhka{display:none}
+  .kn__mini{flex:1 0 110px;margin:0;font-size:.85rem;color:var(--muted);font-weight:600}
+  .kn__mini output{display:block;font:700 1.05rem/1.25 var(--font-d);color:var(--ink);margin-top:2px}
+}
 .kn__viz{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:16px}
 .kn fieldset{border:1px solid var(--line);border-radius:var(--radius);background:#fff;padding:20px 22px;margin:0 0 16px}
 .kn legend{font:700 1.15rem/1.2 var(--font-d);padding:0 6px;margin-left:-6px}

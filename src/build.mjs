@@ -238,6 +238,7 @@ add('/proces/', page({ path: '/proces/', title: 'Процесът на ремо�
         </fieldset>
       </form>
       <div class="kn__viz" data-kn-plan>${plan({ id: 'kn', state: [...LAYERS], floor: 'laminat', wall: '#F4F2EE', kitchen: '#3A4A6B', label: 'Схема на жилището' })}
+        <p class="kn__mini" aria-hidden="true">Ориентировъчно<output data-kn-obshto-mini>от ${evro(r.min)} до ${evro(r.max)}</output></p>
         <p class="belezhka" style="margin:10px 4px 0">Схемата е условна. Площта и броят стаи не променят чертежа, а само цената.</p></div>
     </div>` }));
 }
@@ -254,7 +255,7 @@ for (const o of OBEKTI) {
   add(`/zavarsheni-obekti/${o.slug}/`, page({ path: `/zavarsheni-obekti/${o.slug}/`, title: o.ime, desc: `${o.vid}: ${o.ime}. ${o.kratko}`,
     crumbs: [['Начало', '/'], ['Завършени обекти', '/zavarsheni-obekti/'], [o.ime, `/zavarsheni-obekti/${o.slug}/`]],
     body: `<section class="str-glava"><div class="wrap str-glava__grid s-art"><div><p class="eyebrow">${o.mesto}</p><h1>${o.ime}</h1><p class="lead">${o.kratko}</p><p class="meta"><span>${o.vid}</span></p></div>
-      <figure class="str-glava__art" style="margin:0">${artRoom(o.art, 'Илюстрация на интериора')}</figure></div></section>
+      <figure class="str-glava__art" style="margin:0">${artRoom(o.art, 'Илюстрация на интериора')}<figcaption class="belezhka" style="padding:8px 14px;margin:0">Илюстрация на интериора. Снимките от обекта предстоят.</figcaption></figure></div></section>
     <div class="wrap izkl"><div class="prose">${md(o.text)}</div>
       <aside class="strana" aria-label="Още обекти"><div class="box box--tamno on-dark"><h2>Искате подобен резултат?</h2><p>Започваме с безплатен оглед.</p>${btn('/kontakti/#forma', 'Заявете оглед', { cls: 'btn--white' })}</div></aside></div>
     <section class="sek" aria-labelledby="h-oshte"><div class="wrap">${sekGlava({ id: 'h-oshte', h: 'Вижте и' })}<div class="grid g2">${drugi.map(d => obektKarta(d)).join('')}</div></div></section>` }));

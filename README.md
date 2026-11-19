@@ -13,6 +13,8 @@ npm run build      # генерира dist/
 npm run preview    # build + локален сървър на http://localhost:4173
 ```
 
+Публикуван адрес: https://remont-studio-ten.vercel.app/
+
 Vercel използва `vercel.json`: `node src/build.mjs` → `dist/`, плюс функцията `api/zapitvane.js`.
 
 ## Структура
